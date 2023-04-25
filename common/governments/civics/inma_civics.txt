@@ -1,0 +1,18 @@
+integrated_machine = {
+	potential = { authority = { value = auth_machine_intelligence } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_machine_servitor
+				value = civic_machine_terminator
+				value = civic_machine_assimilator
+			}
+		}
+	}
+	modification = no
+	random_weight = { base = 0}
+	ai_weight = {base = 0}
+	traits = {
+		trait = integrated
+	}
+}

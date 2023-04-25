@@ -1,0 +1,16 @@
+integrated = {
+	cost = 0
+	sorting_priority = 10
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+	randomized = no
+	allowed_archetypes = { ROBOT MACHINE }
+}
