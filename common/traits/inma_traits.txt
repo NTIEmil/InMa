@@ -1,4 +1,4 @@
-integrated = {
+trait_robot_integrated = {
 	cost = 0
 	sorting_priority = 10
 	species_potential_add = {
@@ -15,7 +15,6 @@ integrated = {
 	allowed_archetypes = { ROBOT MACHINE }
 	modifier {
 		pop_housing_usage_mult = -1
-		pop_assembly_speed = -1
 		planet_pops_robotics_upkeep_mult = -1
 	}
 }
