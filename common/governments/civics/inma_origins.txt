@@ -1,0 +1,29 @@
+origin_integrated_machine = {
+	is_origin = yes
+	starting_colony = pc_robotic
+	max_once_global = yes
+
+	playable = {
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+
+	possible = {
+		authority = { value = auth_machine_intelligence }
+		civics = {
+			value = civic_integrated_machine
+		}
+	}
+
+	random_weight = {
+		base = 0
+	}
+
+	traits = {
+		trait = trait_robot_integrated
+	}
+	
+	modifier {
+		colony_start_num_pops_add = -1
+		planet_pop_assembly_mult = -1
+	}
+}
