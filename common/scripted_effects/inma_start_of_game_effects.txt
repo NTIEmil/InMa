@@ -1274,26 +1274,29 @@ generate_start_buildings_and_districts = {
 				# Blocker that removes the extra machine world replicator jobs until removed
 				add_deposit = d_resource_consolidation_1
 			}
+		}
 		#INMA**
         #Integraded machines origin
         else = {
 			while = {
-				while = {
-					count = 2
-					add_district_and_planet_size_if_needed_effect = {
-						district = district_open_area
-					}
-				}
-
-				while = {
-					count = 2
-					add_district_and_planet_size_if_needed_effect = {
-						district = district_automated_industry
-					}
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_allocated_area
 				}
 			}
+
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_automated_industry
+			}
+
+			add_building = building_machine_capital
+
+			add_building = building_machine_assembly_plant
+
+			add_building = building_uplink_node
+
+			add_building = building_research_lab_1
         }
-		}
 		# Replace a mining district with a farming district for lithoid empires with an organic secondary species that use food for alloy production
 		if = {
 			limit = {

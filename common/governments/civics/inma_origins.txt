@@ -9,9 +9,6 @@ origin_integrated_machine = {
 
 	possible = {
 		authority = { value = auth_machine_intelligence }
-		civics = {
-			value = civic_integrated_machine
-		}
 	}
 
 	random_weight = {
