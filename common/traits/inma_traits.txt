@@ -15,7 +15,7 @@ trait_robot_integrated = {
 	allowed_archetypes = { ROBOT MACHINE }
 	modifier {
 		pop_housing_usage_mult = -1
-		planet_pops_robotics_upkeep_mult = -1
+		pop_amenities_usage_mult = -1
 		planet_pops_robotics_upkeep_mult = -1
 	}
 }
