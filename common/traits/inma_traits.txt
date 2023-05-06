@@ -16,5 +16,6 @@ trait_robot_integrated = {
 	modifier {
 		pop_housing_usage_mult = -1
 		planet_pops_robotics_upkeep_mult = -1
+		planet_pops_robotics_upkeep_mult = -1
 	}
 }

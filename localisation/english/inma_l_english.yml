@@ -1,3 +1,114 @@
-l_english:
+﻿l_english:
+
+	##########
+	# Origin #
+	##########
+
+	#Integrated machine
 	origin_integrated_machine:0 "Integrated machine"
-	origin_integrated_machine_desc:0 "Text"
+	origin_integrated_machine_desc:0 "The machine has expanded to encompas the entire planet and now seeks to establish itself on new planets."
+
+	#############
+	# Districts #
+	#############
+
+	#Allocated area
+	district_allocated_area:0 "Allocated area"
+	district_allocated_area_desc:0 "Area allocated to more advanced contructions."
+	district_allocated_area_plural:0 "Allocated areas"
+
+	#Automated industry
+	district_automated_industry:0 "Automated industry"
+	district_automated_industry_desc:0 "A massive automated industrial complex."
+	district_automated_industry_plural:0 "Automated industries"
+
+	#Automated generator
+	district_automated_generator:0 "Automated generator"
+	district_automated_generator_desc:0 "A large area that generates energy using various methods."
+	district_automated_generator_plural:0 "Automated generates"
+
+	#Automated mine
+	district_automated_mine:0 "Automated mine"
+	district_automated_mine_desc:0 "An automated mine mining deep into the core of the planet."
+	district_automated_mine_plural:0 "Automated mines"
+
+	#Automated farm
+	district_automated_farm:0 "Automated farm"
+	district_automated_farm_desc:0 "A large fully automated farm area."
+	district_automated_farm_plural:0 "Automated mines"
+
+	################
+	# Planet class #
+	################
+
+	#Robotic world
+	pc_robotic:0 "Robotic world"
+	pc_robotic_desc:0 "World covered in a single machine."
+	pc_robotic_broken:0 "Broken AI World"
+	pc_robotic_broken_desc:0 "$pc_ai_desc$"
+	pc_robotic_adj:0 "cybernetic"
+	pc_robotic_tile:0 "Cybernetic Terrain"
+	pc_robotic_tile_desc:0 "A metalic surface with very few open passages."
+	trait_pc_robotic_preference:0 "Robotic World Preference"
+	trait_pc_robotic_preference_desc:0 "$trait_pc_arctic_preference_desc$"
+	mod_pc_robotic_habitability:0 "Robotic World Habitability"
+
+	#########
+	# Trait #
+	#########
+
+	#Integrated
+	trait_robot_integrated:0 "Integrated"
+	trait_robot_integrated_desc:0 "They are part of the machine, without their own synthetic bodies."
+
+	#############
+	# Buildings #
+	#############
+
+	#Planetary outpost
+	building_central_outpost:0 "Planetary outpost"
+	building_central_outpost_desc:0 "The first part of the new machine."
+
+	#Planetary command
+	building_integrated_capital:0 "Planetary command"
+	building_integrated_capital_desc:0 "The hearth of a small planetary machine."
+
+	#Planetary command complex
+	building_integrated_major_capital:0 "Planetary command complex"
+	building_integrated_major_capital_desc:0 "The hearth of a medium planetary machine."
+
+	#Primary command
+	building_integrated_system_capital:0 "Primary command"
+	building_integrated_system_capital_desc:0 "The hearth of a large planetary machine."
+
+	#Imperial command
+	building_imperial_integrated_capital:0 "Imperial command"
+	building_imperial_integrated_capital_desc:0 "The hearth of a planetary machine recognized by the entire galaxy."
+
+	#Automated lab
+	building_automated_lab_1:0 "Automated lab"
+	building_automated_lab_1_desc:0 "An automated research lab."
+
+	#Automated lab compex
+	building_automated_lab_2:0 "Automated lab complex"
+	building_automated_lab_2_desc:0 "An aoutomated research complex."
+
+	#Advanced automated lab complex
+	building_automated_lab_3:0 "Advanced automated lab complex"
+	building_automated_lab_3_desc:0 "An andvanced automated lab complex."
+
+	#######
+	# Job #
+	#######
+
+	#Controller
+	job_controller:0 "Controller"
+	job_controller_plural:0 "Controllers"
+	job_controller_desc:0 "The controllers make sure that the hearth of the planetary machine works at full efficiency, as well as protect it from external threaths."
+	job_controller_effect_desc:0 "£job_controller£ $job_controller_plural$ spawn £defense_army£ §YDefense Armies§!"
+	#Commands to modify the job and the amount of jobs
+	mod_job_controller_add:0 "$job_controller$ Jobs"
+	mod_job_controller_per_pop:0 "§G+1§! $job_controller$ Job per $VALUE$ Pops"
+	mod_job_controller_per_pop_short:0 "\n§G+1§! £mod_job_controller_add£ per $VALUE$ £pop£"
+	mod_planet_pops_controller_upkeep_mult:0 "Controller Upkeep"
+	planet_controllers:0 "Controller Jobs"

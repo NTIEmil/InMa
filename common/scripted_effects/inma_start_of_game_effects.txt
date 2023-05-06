@@ -1283,13 +1283,17 @@ generate_start_buildings_and_districts = {
 				add_district_and_planet_size_if_needed_effect = {
 					district = district_allocated_area
 				}
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_automated_industry
-				}
 			}
 
 			add_district_and_planet_size_if_needed_effect = {
-				district = district_automated_generator
+				district = district_automated_industry
+			}
+
+			while = {
+				count = 4
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_automated_generator
+				}
 			}
 
 			add_district_and_planet_size_if_needed_effect = {
@@ -1339,13 +1343,29 @@ generate_start_buildings_and_districts = {
 					is_catalytic_empire = yes
 				}
 			}
-			remove_district = district_mining
-			add_district_and_planet_size_if_needed_effect = {
-				district = district_farming
+
+			#INMA**
+			if = {
+				limit = { owner = { has_origin = origin_integrated_machine } }
+
+				remove_district = district_automated_mine
+				add_district_and_planet_size_if_needed_effect = {
+				district = district_automated_farm
+				}
+				remove_district = district_automated_generator
+				add_district_and_planet_size_if_needed_effect = {
+				district = district_automated_farm
+				}
 			}
-			remove_district = district_generator
-			add_district_and_planet_size_if_needed_effect = {
-				district = district_farming
+			else = {
+				remove_district = district_mining
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_farming
+				}
+				remove_district = district_generator
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_farming
+				}
 			}
 		}
 		# Replace 1 generator district with 1 farming district for anglers civic on wet worlds

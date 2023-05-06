@@ -2,6 +2,8 @@ origin_integrated_machine = {
 	is_origin = yes
 	starting_colony = pc_robotic
 	max_once_global = yes
+	icon = "gfx/interface/icons/origins/origin_integrated_machine.dds"
+    picture = GFX_origin_resource_consolidation
 
 	playable = {
 		host_has_dlc = "Synthetic Dawn Story Pack"
@@ -9,6 +11,19 @@ origin_integrated_machine = {
 
 	possible = {
 		authority = { value = auth_machine_intelligence }
+		civics = {
+			NOR = {
+				value = civic_machine_servitor
+				value = civic_machine_terminator
+				value = civic_machine_assimilator
+				value = civic_machine_zero_waste_protocols
+				value = civic_machine_built_to_last
+				value = civic_machine_ota_updates
+				value = civic_machine_replication
+				value = civic_machine_maintenance_protocols
+				value = civic_machine_toxic_baths
+			}
+		}
 	}
 
 	random_weight = {

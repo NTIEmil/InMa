@@ -266,10 +266,6 @@ building_integrated_system_capital = {
 		building_machine_major_capital
 	}
 
-	allow = {
-		num_pops >= 50
-	}
-
 	prerequisites = {
 		"tech_galactic_administration"
 	}
