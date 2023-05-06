@@ -1283,19 +1283,22 @@ generate_start_buildings_and_districts = {
 				add_district_and_planet_size_if_needed_effect = {
 					district = district_allocated_area
 				}
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_automated_industry
+				}
 			}
 
 			add_district_and_planet_size_if_needed_effect = {
-				district = district_automated_industry
+				district = district_automated_generator
 			}
 
-			add_building = building_machine_capital
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_automated_mine
+			}
 
-			add_building = building_machine_assembly_plant
+			add_building = building_integrated_capital
 
-			add_building = building_uplink_node
-
-			add_building = building_research_lab_1
+			add_building = building_automated_lab_1
         }
 		# Replace a mining district with a farming district for lithoid empires with an organic secondary species that use food for alloy production
 		if = {

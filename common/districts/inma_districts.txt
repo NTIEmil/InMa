@@ -5,6 +5,9 @@
 # New districts #
 #################
 
+#These districts are built on robotic_worlds
+#Normal empires can build and maintain them, but only if an integrated_machine has converted it to a robotic_world
+
 district_allocated_area = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
@@ -179,6 +182,8 @@ district_automated_mine = {
 ###################################
 # Modifying of existing districts #
 ###################################
+
+#This overwrites the existing districts
 
 #Farming districs are uneffected
 

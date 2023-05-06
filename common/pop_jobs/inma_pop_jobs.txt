@@ -1,0 +1,70 @@
+controller = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_robot_assembly_plant
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	resources = {
+		category = planet_controller
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	#Level one or two capital
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	#Level three capital
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				has_active_building = building_integrated_major_capital
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 2
+		}
+	}
+
+	#Level four capital
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				has_active_building = building_integrated_system_capital
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 6
+		}
+	}
+
+	#Emperor capital
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				has_active_building = building_imperial_integrated_capital
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 10
+		}
+	}
+
+	weight = { weight = @spawner_drone_job_weight }
+}
