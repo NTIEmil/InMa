@@ -120,10 +120,10 @@
 	#New descriptions when using integrated_machine
 
 	#Catalystic processing
-	civic_tooltip_machine_catalytic_processing_integrated_machine_effects:0 "Replaces the £minerals£ §Y$minerals$§! consumption of £district_automated_industry£ §Y$district_automated_industry_plural$§! with £food£ §Y$food$§!"
+	civic_tooltip_machine_catalytic_processing_integrated_machine_effects:0 "Replaces the £minerals£ §Y$minerals$§! consumption of §HAutomated industries§! with £food£ §Y$food$§!."
 
 	#Rockbreakers
-	civic_tooltip_machine_rockbreakers_integrated_machine_effects:0 "Increases the £minerals£ §Y$minerals$§! production of £district_automated_mine£ §Y$district_automated_mine_plural$§! by 2"
+	civic_tooltip_machine_rockbreakers_integrated_machine_effects:0 "Increases the £minerals£ §Y$minerals$§! production of §HAutomated mines§! by 2."
 
 	#######################
 	# Economic categories #
