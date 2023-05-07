@@ -1322,9 +1322,9 @@ district_mining = {
 		NAND = {
 			exists = from
 			from = { is_subterranean_empire = yes }
-			#INMA*
-			from = { has_origin = origin_integrated_machine }
 		}
+		#INMA*
+		NOT = { from = { has_origin = origin_integrated_machine } }
 	}
 
 	potential = {
@@ -1332,9 +1332,9 @@ district_mining = {
 		NAND = {
 			exists = owner
 			owner = { is_subterranean_empire = yes }
-			#INMA*
-			from = { has_origin = origin_integrated_machine }
 		}
+		#INMA*
+		NOT = { owner = { has_origin = origin_integrated_machine } }
 	}
 
 	allow = {
@@ -1458,6 +1458,9 @@ district_farming = {
 
 	show_on_uncolonized = {
 		uses_district_set = standard
+		#INMA*
+		exists = from
+		NOT = { from = { has_origin = origin_integrated_machine } }
 	}
 
 	potential = {
@@ -1478,9 +1481,9 @@ district_farming = {
 					country_uses_food = no
 				}
 			}
-			#INMA*
-			owner = { has_origin = origin_integrated_machine }
 		}
+		#INMA*
+		NOT = { owner = { has_origin = origin_integrated_machine } }
 	}
 
 	allow = {
