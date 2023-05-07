@@ -1,3 +1,8 @@
+##########
+# Origin #
+##########
+
+#Origin for the new empire
 origin_integrated_machine = {
 	is_origin = yes
 	starting_colony = pc_robotic

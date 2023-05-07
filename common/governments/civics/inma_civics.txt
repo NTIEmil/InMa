@@ -1,22 +1,46 @@
-# civic_integrated_machine = {
-# 	potential = { authority = { value = auth_machine_intelligence } }
-# 	possible = {
-# 		civics = {
-# 			NOR = {
-# 				value = civic_machine_servitor
-# 				value = civic_machine_terminator
-# 				value = civic_machine_assimilator
-# 			}
-# 		}
-# 	}
-# 	modification = no
-# 	random_weight = { base = 0}
-# 	ai_weight = {base = 0}
-# 	# traits = {
-# 	# 	trait = trait_robot_integrated
-# 	# }
-# 	# modifier {
-# 	# 	colony_start_num_pops_add = -1
-# 	# 	planet_pop_assembly_mult = -1
-# 	# }
-# }
+##############################################################
+# All modifications made by this is written just under #INMA #
+##############################################################
+
+#INMA* = Modifications
+
+civic_machine_catalytic_processing = {
+	playable = { host_has_dlc = "Plantoids Species Pack" }
+	ai_playable = { host_has_dlc = "Plantoids Species Pack" }
+	#INMA*
+	if = {
+		limit = { has_origin = origin_integrated_machine }
+		description = "civic_tooltip_machine_catalytic_processing_integrated_machine_effects"
+	}
+	else = {
+		description = "civic_tooltip_machine_catalytic_processing_effects"
+	}
+
+	potential = {
+		authority = { value = auth_machine_intelligence }
+	}
+	possible = {
+		origin = { NOT = { value = origin_machine } }
+	}
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = { 
+		base = 0		# Too dangerous to switch mid-game
+	}
+}
+civic_machine_rockbreakers = {
+	potential = { authority = { value = auth_machine_intelligence } }
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = { 
+		base = @ai_civic_default_base_weight 
+	}
+	#INMA*
+	if = {
+		limit = { has_origin = origin_integrated_machine }
+		description = "civic_tooltip_machine_rockbreakers_integrated_machine_effects"
+	}
+	else = {
+		modifier = {
+			planet_miners_minerals_produces_add = 1
+		}
+	}
+}

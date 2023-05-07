@@ -1,3 +1,7 @@
+##############################################################
+# All modifications made by this is written just under #INMA #
+##############################################################
+
 #INMA* = Modification
 
 has_upgraded_capital = {

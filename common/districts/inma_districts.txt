@@ -5,8 +5,7 @@
 # New districts #
 #################
 
-#These districts are built on robotic_worlds
-#Normal empires can build and maintain them, but only if an integrated_machine has converted it to a robotic_world
+#Districts for empires using origin_integrated_machine
 
 district_allocated_area = {
 	base_buildtime = 480
@@ -15,18 +14,12 @@ district_allocated_area = {
 
 	show_on_uncolonized = {
 		exists = from
-		OR = {
-			uses_district_set = robotic_world
-			from = { has_origin = origin_integrated_machine }
-		}
+		from = { has_origin = origin_integrated_machine }
 	}
 
 	potential = {
 		exists = owner
-		OR = {
-			uses_district_set = robotic_world
-			owner = { has_origin = origin_integrated_machine }
-		}
+		owner = { has_origin = origin_integrated_machine }
 	}
 
 	conversion_ratio = 1
@@ -63,18 +56,12 @@ district_automated_industry = {
 
 	show_on_uncolonized = {
 		exists = from
-		OR = {
-			uses_district_set = robotic_world
-			from = { has_origin = origin_integrated_machine }
-		}
+		from = { has_origin = origin_integrated_machine }
 	}
 
 	potential = {
 		exists = owner
-		OR = {
-			uses_district_set = robotic_world
-			owner = { has_origin = origin_integrated_machine }
-		}
+		owner = { has_origin = origin_integrated_machine }
 	}
 
 	conversion_ratio = 1
@@ -85,7 +72,7 @@ district_automated_industry = {
 	}
 
 	resources = {
-		category = planet_districts_cities
+		category = planet_automated_metallurgist_districts
 		cost = {
 			minerals = @city_cost
 		}
@@ -122,10 +109,7 @@ district_automated_generator = {
 
 	show_on_uncolonized = {
 		exists = from
-		OR = {
-			uses_district_set = robotic_world
-			from = { has_origin = origin_integrated_machine }
-		}
+		from = { has_origin = origin_integrated_machine }
 	}
 
 	potential = {
@@ -143,7 +127,7 @@ district_automated_generator = {
 	}
 
 	resources = {
-		category = planet_districts_cities
+		category = planet_automated_generator_districts
 		cost = {
 			minerals = @base_cost
 		}
@@ -162,10 +146,7 @@ district_automated_mine = {
 
 	show_on_uncolonized = {
 		exists = from
-		OR = {
-			uses_district_set = robotic_world
-			from = { has_origin = origin_integrated_machine }
-		}
+		from = { has_origin = origin_integrated_machine }
 	}
 
 	potential = {
@@ -183,7 +164,7 @@ district_automated_mine = {
 	}
 
 	resources = {
-		category = planet_districts_cities
+		category = planet_automated_mining_districts
 		cost = {
 			minerals = @base_cost
 		}
@@ -196,7 +177,7 @@ district_automated_mine = {
 		produces = {
 			trigger = {
 				exists = owner
-				owner = { civic = { value = civic_machine_rockbreakers } }
+				owner = { has_valid_civic =  civic_machine_rockbreakers }
 			}
 			minerals = 2
 		}
@@ -209,20 +190,18 @@ district_automated_farm = {
 
 	show_on_uncolonized = {
 		exists = from
-		OR = {
-			uses_district_set = robotic_world
-			from = { has_origin = origin_integrated_machine }
+		from = { 
+			has_origin = origin_integrated_machine
+			NOT = { country_uses_food = no }
 		}
-		NOT = { country_uses_food = no }
 	}
 
 	potential = {
 		exists = owner
-		OR = {
-			uses_district_set = robotic_world
-			owner = { has_origin = origin_integrated_machine }
+		owner = {
+			has_origin = origin_integrated_machine
+			NOT = { country_uses_food = no }
 		}
-		NOT = { country_uses_food = no }
 	}
 
 	allow = {
@@ -236,7 +215,7 @@ district_automated_farm = {
 	}
 
 	resources = {
-		category = planet_districts
+		category = planet_automated_farming_districts
 		cost = {
 			minerals = @base_cost
 		}
@@ -266,8 +245,6 @@ district_automated_farm = {
 ###################################
 
 #This overwrites the existing districts
-
-#Farming districs are uneffected
 
 #INMA* = Modification
 
@@ -450,11 +427,13 @@ district_city = {
 			}
 		}
 		NOT = { has_deposit = d_crashed_slaver_ship }
+		#INMA*
 		OR = {
 			uses_district_set = standard
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
+			uses_district_set = robotic_world
 		}
 	}
 
@@ -587,11 +566,13 @@ district_hive = {
 	potential = {
 		exists = owner
 		owner = { is_hive_empire = yes }
+		#INMA*
 		OR = {
 			uses_district_set = standard
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
+			uses_district_set = robotic_world
 		}
 	}
 
@@ -673,23 +654,33 @@ district_nexus = {
 	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
-		from = { is_machine_empire = yes }
+		#INMA*
+		from = {
+			is_machine_empire = yes
+			NOT = { has_origin = origin_integrated_machine }
+		}
 		OR = {
 			uses_district_set = standard
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
+			uses_district_set = robotic_world
 		}
 	}
 
 	potential = {
+		#INMA*
 		exists = owner
-		owner = { is_machine_empire = yes }
+		owner = {
+			is_machine_empire = yes
+			NOT = { has_origin = origin_integrated_machine }
+		}
 		OR = {
 			uses_district_set = standard
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
+			uses_district_set = robotic_world
 		}
 	}
 
@@ -767,20 +758,14 @@ district_industrial = {
 		exists = from
 		uses_district_industrial = yes
 		#INMA*
-		NOR = {
-			uses_district_set = robotic_world
-			from = { has_origin = origin_integrated_machine }
-		}
+		NOT = { from = { has_origin = origin_integrated_machine } }
 	}
 
 	potential = {
 		exists = owner
 		uses_district_industrial = yes
 		#INMA*
-		NOR = {
-			uses_district_set = robotic_world
-			owner = { has_origin = origin_integrated_machine }
-		}
+		NOT = { owner = { has_origin = origin_integrated_machine } }
 	}
 
 	allow = {
@@ -1493,6 +1478,8 @@ district_farming = {
 					country_uses_food = no
 				}
 			}
+			#INMA*
+			owner = { has_origin = origin_integrated_machine }
 		}
 	}
 
@@ -1685,6 +1672,8 @@ district_generator_uncapped = {
 		OR = {
 			uses_district_set = hive_world
 			uses_district_set = machine_world
+			#INMA*
+			uses_district_set = robotic_world
 			AND = {
 				exists = from
 				from = {
@@ -1704,6 +1693,8 @@ district_generator_uncapped = {
 		OR = {
 			uses_district_set = hive_world
 			uses_district_set = machine_world
+			#INMA*
+			uses_district_set = robotic_world
 			AND = {
 				exists = owner
 				owner = {
@@ -1716,7 +1707,7 @@ district_generator_uncapped = {
 			}
 		}
 		#INMA*
-		NOT = { from = { has_origin = origin_integrated_machine } }
+		NOT = { owner = { has_origin = origin_integrated_machine } }
 	}
 
 	allow = {
@@ -1853,6 +1844,8 @@ district_mining_uncapped = {
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
+			#INMA*
+			uses_district_set = robotic_world
 			AND = {
 				exists = from
 				from = { is_subterranean_empire = yes }
@@ -1868,6 +1861,8 @@ district_mining_uncapped = {
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
+			#INMA*
+			uses_district_set = robotic_world
 			AND = {
 				exists = owner
 				owner = { is_subterranean_empire = yes }
@@ -1875,7 +1870,7 @@ district_mining_uncapped = {
 			}
 		}
 		#INMA*
-		NOT = { from = { has_origin = origin_integrated_machine } }
+		NOT = { owner = { has_origin = origin_integrated_machine } }
 	}
 
 	allow = {
@@ -2088,6 +2083,16 @@ district_farming_uncapped = {
 		OR = {
 			uses_district_set = hive_world
 			uses_district_set = shattered_ring_world
+			#INMA*
+			uses_district_set = robotic_world
+		}
+		#INMA*
+		NOT = {
+			exists = from
+			from = {
+				has_origin = origin_integrated_machine
+				country_uses_food = no
+			}
 		}
 	}
 
@@ -2095,6 +2100,8 @@ district_farming_uncapped = {
 		OR = {
 			uses_district_set = hive_world
 			uses_district_set = shattered_ring_world
+			#INMA*
+			uses_district_set = robotic_world
 			AND = {
 				exists = owner
 				owner = { is_anglers_empire = yes }
@@ -2105,6 +2112,14 @@ district_farming_uncapped = {
 			AND = {
 				owner = { is_ai = yes }
 				owner = { country_uses_food = no }
+			}
+		}
+		#INMA*
+		NOT = {
+			exists = owner
+			owner = {
+				has_origin = origin_integrated_machine
+				country_uses_food = no
 			}
 		}
 	}

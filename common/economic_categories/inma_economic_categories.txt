@@ -1,0 +1,41 @@
+#######################
+# Economic categories #
+#######################
+
+#Lets the production of districts and buildings increase at the same rate as normal jobs
+
+#Automated research buildings
+planet_automated_research_buildings = {
+	parent = planet_buildings
+	parent = planet_researchers
+}
+
+#Automated governing buildings
+planet_automated_governing_buildings = {
+	parent = planet_buildings
+	parent = planet_administrators
+}
+
+#Automated metallurgist districts
+planet_automated_metallurgist_districts = {
+	parent = planet_districts_cities
+	parent = planet_metallurgists
+}
+
+#Automated generator districts
+planet_automated_generator_districts = {
+	parent = planet_districts_cities
+	parent = planet_technician
+}
+
+#Automated mining districts
+planet_automated_mining_districts = {
+	parent = planet_districts_cities
+	parent = planet_miners
+}
+
+#Automated farming districts
+planet_automated_farming_districts = {
+	parent = planet_districts
+	parent = planet_farmers
+}

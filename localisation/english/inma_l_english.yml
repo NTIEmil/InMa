@@ -112,3 +112,37 @@
 	mod_job_controller_per_pop_short:0 "\n§G+1§! £mod_job_controller_add£ per $VALUE$ £pop£"
 	mod_planet_pops_controller_upkeep_mult:0 "Controller Upkeep"
 	planet_controllers:0 "Controller Jobs"
+
+	##########
+	# Civics #
+	##########
+
+	#New descriptions when using integrated_machine
+
+	#Catalystic processing
+	civic_tooltip_machine_catalytic_processing_integrated_machine_effects:0 "Replaces the £minerals£ §Y$minerals$§! consumption of £district_automated_industry£ §Y$district_automated_industry_plural$§! with £food£ §Y$food$§!"
+
+	#Rockbreakers
+	civic_tooltip_machine_rockbreakers_integrated_machine_effects:0 "Increases the £minerals£ §Y$minerals$§! production of £district_automated_mine£ §Y$district_automated_mine_plural$§! by 2"
+
+	#######################
+	# Economic categories #
+	#######################
+
+	#Automated research buildings
+	planet_automated_research_buildings:0 "Automated research buildings"
+
+	#Automated governing buildings
+	planet_automated_governing_buildings:0 "Automated governing buildings"
+
+	#Automated metallurgist districts
+	planet_automated_metallurgist_districts:0 "Automated metallurgist districts"
+
+	#Automated generator districts
+	planet_automated_generator_districts:0 "Automated generator districts"
+
+	#Automated mining districts
+	planet_automated_mining_districts:0 "Automated mining districts"
+
+	#Automated farming districts
+	planet_automated_farming_districts:0 "Automated farming districts"

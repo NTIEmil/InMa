@@ -2467,7 +2467,7 @@ generate_start_pops = {
 		}
 	}
 	#INMA**
-    #Reducerar populationen enligt samma standard som andra Civics.
+    #Reduces statrting pops in the same way as other civics.
     if = {
     limit = {
 			owner = { has_origin = origin_integrated_machine }

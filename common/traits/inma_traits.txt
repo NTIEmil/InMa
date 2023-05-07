@@ -1,3 +1,8 @@
+#########
+# Trait #
+#########
+
+#Trait for empires using origin_integrated_machine
 trait_robot_integrated = {
 	cost = 0
 	sorting_priority = 10

@@ -1,3 +1,8 @@
+################
+# Planet class #
+################
+
+#Planet class used by empires using origin_integrated_machine
 pc_robotic = {
 	entity = "machine_planet"
 	entity_scale = @planet_standard_scale
@@ -17,6 +22,7 @@ pc_robotic = {
 	modifier = {
 		pop_environment_tolerance = 0.0
 		planet_max_buildings_add = 12
+		planet_jobs_produces_mult = 0.10
 	}
 
 	spawn_odds = 0
